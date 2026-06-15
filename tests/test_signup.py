@@ -6,7 +6,6 @@ from data.test_data import VALID_DATA
 from utils.assertions import assert_true, assert_equal
 import time
 import allure
-from utils.file_upload import upload_file
 
 
 class TestSignup:

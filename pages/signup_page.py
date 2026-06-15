@@ -76,8 +76,7 @@ class SignupPage(BasePage):
         self.click_element(self.CLICK_PREFERRED_COUNTRIES)
         self.click_element(self.PREFERRED_INSTITUTION)
 
-        file_input = self.wait.until(EC.presence_of_element_located(self.UPLOAD_FILE))
-        file_input.send_keys(file_path)
+        self.wait.until(EC.presence_of_element_located(self.UPLOAD_FILE)).send_keys(file_path)
         
 
 
