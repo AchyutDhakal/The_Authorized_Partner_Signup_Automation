@@ -35,7 +35,7 @@ class TestSignup:
 
         with allure.step("Enter otp"):
             self.signup_page.enter_otp(get_otp_from_email())
-        
+
         with allure.step("Filling out Agency Details"):
             self.signup_page.enter_agency_details(valid_data)
 
@@ -54,7 +54,7 @@ class TestSignup:
 
         with allure.step("Assertion"):
             profile_name = self.signup_page.get_element_text(self.signup_page.PROFILE_NAME)
-            assert_equal(profile_name, f"{valid_data["firstName"]} {valid_data["lastName"]}", "Actual and expected names don't match", "signup", self.signup_page)
+            assert_equal(profile_name, f"{valid_data['firstName']} {valid_data['lastName']}", "Actual and expected names don't match", "signup", self.signup_page)
 
     @allure.title("Testing invalid personal details")
     @pytest.mark.parametrize("invalid_personal_data",INVALID_PERSONAL_DATA)

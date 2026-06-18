@@ -50,11 +50,11 @@ class SignupPage(BasePage):
 
     def enter_personal_details(self, personal_details):
         self.fill_form_dynamically(personal_details)
-        self.click_element(self.NEXT_BUTTON)   
+        self.click_element(self.NEXT_BUTTON)
 
     def enter_otp(self, otp):
-        self.enter_text(self.OTP_INPUT, otp)    
-        self.click_element(self.VERIFY_CODE_BUTTON) 
+        self.enter_text(self.OTP_INPUT, otp)
+        self.click_element(self.VERIFY_CODE_BUTTON)
 
     def enter_agency_details(self, agency_details):
         self.wait.until(EC.visibility_of_element_located(self.AGENCY_NAME_INPUT))
@@ -69,7 +69,7 @@ class SignupPage(BasePage):
         self.click_element(self.SERVICES)
         self.click_element(self.NEXT_BUTTON)
 
-    def verification(self, business_number, file_path =r"G:\Downloads\469061042_878683714461045_4077351663019849769_n.jpg"):
+    def verification(self, business_number, file_path =r"/home/intosoft/Downloads/hatGPT Image Jun 17, 2026, 11_32_10 AM.png"):
         self.wait.until(EC.visibility_of_element_located(self.BUSINESS_REGISTRATION))
         self.fill_form_dynamically(business_number)
         self.click_element(self.PREFERRED_COUNTRIES)
@@ -77,10 +77,9 @@ class SignupPage(BasePage):
         self.click_element(self.PREFERRED_INSTITUTION)
 
         self.wait.until(EC.presence_of_element_located(self.UPLOAD_FILE)).send_keys(file_path)
-        
 
 
 
 
 
-        
+
